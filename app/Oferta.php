@@ -13,10 +13,9 @@ class Oferta extends Model
         return $this->belongsTo('App\Produto');
     }
 
-    // Produtor ou Propriedade?
-    public function produtor()
+    public function propriedade()
     {
-        return $this->belongsTo('App\Produtor');
+        return $this->belongsTo('App\Propriedade');
     }
 
     public function unidade()
