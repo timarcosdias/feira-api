@@ -16,7 +16,10 @@ class CreateFeirasTable extends Migration
         Schema::create('feiras', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nome');
-            
+            $table->string('descricao');
+            $table->float('latitude', 10, 6);
+            $table->float('longitude', 10, 6);
+            $table->integer('dia_da_semana');
             $table->timestamps();
         });
     }

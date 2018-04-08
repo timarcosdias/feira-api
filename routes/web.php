@@ -1,4 +1,5 @@
 <?php
+use App\Unidade;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('/api/unidades', 'UnidadeController');
+
+Route::middleware('auth:api')->get('/user', function (Request $request) {
+    return $request->user();
+});

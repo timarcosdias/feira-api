@@ -8,8 +8,8 @@ class Unidade extends Model
 {
     protected $table = 'unidades';
 
-    public function produtos()
+    public function ofertas()
     {
-        $this->hasMany('App\Produto');
-    }
+        $this->hasMany('App\Oferta');
+    }    
 }

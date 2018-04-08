@@ -4,10 +4,13 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Feira extends Model
+class Tipo extends Model
 {
+    protected $table = 'tipos';
+    /*
     public function ofertas()
     {
         $this->hasMany('App\Oferta');
     }
+    */
 }

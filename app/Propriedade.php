@@ -10,4 +10,9 @@ class Propriedade extends Model
     {
         return $this->belongsTo('App\Produtor');
     }
+
+    public function ofertas()
+    {
+        return $this->hasMany('App\Oferta');
+    }
 }

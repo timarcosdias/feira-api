@@ -15,11 +15,9 @@ class CreateProdutoresTable extends Migration
     {
         Schema::create('produtores', function (Blueprint $table) {
             $table->increments('id');
-
             $table->string('nome');
-            $table->char('cpf', 11);
-            $table->date('nascimento');
-
+            $table->char('cpf', 11)->nullable();
+            $table->date('nascimento')->nullable();
             $table->timestamps();
         });
     }

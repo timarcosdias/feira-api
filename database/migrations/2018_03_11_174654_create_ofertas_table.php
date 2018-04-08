@@ -15,14 +15,12 @@ class CreateOfertasTable extends Migration
     {
         Schema::create('ofertas', function (Blueprint $table) {
             $table->increments('id');
-
-            $table->integer('produto_id');
-            $table->integer('propriedade_id');
-            $table->integer('unidade_id');
-
+            $table->foreign('produto_id')->references('id')->on('produtos');
+            $table->foreign('propriedade_id')->references('id')->on('propriedades');
+            $table->foreign('unidade_id')->references('id')->on('unidades');
+            $table->foreign('feira_id')->references('id')->on('feiras');
             $table->decimal('preco', 8, 2);
             $table->integer('quantidade');
-
             $table->timestamps();
         });
     }
